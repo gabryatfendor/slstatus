@@ -65,5 +65,13 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+	{ temp, "GPU  %sC°", "/sys/class/thermal/thermal_zone1/temp" },
+	{ separator, "||", NULL },
+	{ temp, "CPU %sC°", "/sys/class/thermal/thermal_zone0/temp" },
+	{ separator, "||", NULL },
+	{ battery_perc, "Battery %s", "BAT0" },
+	{ separator, "||", NULL },
+	{ ipv4, "%s", "wlp2s0" }, 
+	{ separator, "||", NULL },
 	{ datetime, "%s",           "%F %T" },
 };
